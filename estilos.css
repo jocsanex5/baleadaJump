@@ -1,0 +1,312 @@
+/*
+    Estilos Balea_play -By Jocsanex5
+*/
+
+*{ margin:  0; padding: 0; }
+
+body{ text-align: center; background: rgba(8, 9, 9, 0.81);}
+
+.wrapper{
+    background: rgba(8, 9, 9, 0.81);
+    visibility: hidden;
+    margin: auto;
+    position: relative;
+    top: 35px;
+}
+
+.wrapper h2{
+    margin: 20px;
+    color: #fff;
+    font-family: arial;
+    position: relative;
+    top: 20px;
+    font-size: 30px;
+    background: #00ff42;
+    padding: 3px;
+}
+
+#game{
+    background: #fff;
+    margin: 20px;
+}
+
+#play{
+    background: #fff;
+    height: 94%;
+    width: 97%;
+    position: fixed;
+    transition: all 1s;
+    padding: 10px;
+    border: 10px solid #0ff;
+    overflow: auto;
+}
+
+@keyframes playV {
+    0%{ opacity: 2; }
+    100%{ opacity: 0; }
+}
+
+#play img{
+    margin: 30px auto;
+    width: 500px;
+    border-radius: 20px;
+}
+
+#btnJugar, .creador, .ayuda{
+    margin: 10px;
+    font-family: arial;
+    border-radius: 10px;
+    border: 2px solid #0ff;
+}
+
+#btnJugar{
+    padding: 40px 90px; font-size: 30px;
+    background: none;
+}
+
+#btnJugar:hover{
+    border: 4px solid #21ff00;
+    margin: 8px;
+}
+
+.creador, .ayuda{
+    padding: 20px; font-size: 18px;
+    background: #d6fbf9;
+}
+
+.creador:hover, .ayuda:hover{
+    border: 2px solid #904714;
+}
+
+#perder{
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    transition: all 1s;
+    z-index: 1000;
+    visibility: hidden;
+    overflow: auto;
+}
+
+@keyframes perderV {
+    0%{opacity: 0;} 100%{opacity: 2};
+}
+
+@keyframes perderNV{
+    0%{opacity: 2;} 100%{opacity:0;}
+}
+
+#perder div:nth-child(1){
+    background: #2e0000;
+    
+    padding: 5px;
+    font-size: 50px;
+    font-family: arial;
+    margin: 0px 20px;
+    border-radius: 15px;
+    color: #fff;
+    margin: 5px;
+    overflow: auto;
+}
+
+#perder div:nth-child(2){
+    margin: 15px 30px;
+    font-size: 25px;
+    font-family: arial;
+    background: none;
+    padding: 10px;
+    border: 1px solid #0bffdd;
+    font-style: italic;
+    transition: all 0.5s;
+}
+
+#perder img{
+    margin: 10px;
+}
+
+#perder div:nth-child(3), #perder div:nth-child(5){
+    margin: 10px 150px;
+    font-family: arial;
+    font-size: 25px;
+    border-bottom: 2px solid aqua;
+    padding: 10px;
+    font-style: oblique;
+    transition: all 0.5s;
+}
+
+#perder div:nth-child(3):hover, #perder div:nth-child(5):hover{
+    font-size: 30px;
+}
+
+#perder button{
+    margin: 20px;
+    padding: 20px;
+    
+    font-size: 25px;
+    background: none;
+    border-radius: 20px;
+    box-shadow: 1px 1px 4px 1px #000;
+    transition: all 1s;
+}
+
+#perder button:hover{
+    transform: rotate(360deg);
+}
+
+#datos{
+    background: #fff;
+    width: 10%;
+    padding: 10px;
+    border-radius: 20px;
+    position: relative; bottom: 50px; left: 10px;
+    border: 2px solid #05ffd3;
+}
+
+#datos p{
+    font-family: arial;
+    font-size: 20px;
+}
+
+#datos p span{
+    position: relative; bottom: 15px
+}
+
+#MSG{
+    clear: both;
+    background: #fff;
+    width: 20%;
+    padding: 10px;
+    border-radius: 20px;
+    float: right;
+    position: relative; bottom: 120px; right: 80px;
+    border: 2px solid #05ffd3;
+    font-family: arial;
+    font-size: 16px;
+    font-style: oblique;
+}
+
+#imgCubiertos{
+    position: fixed;
+    right: 10px;
+    transform: rotate(30deg)
+}
+
+#imgHond{
+    position: fixed;
+    transform: rotate(-30deg);
+    top: 250px;
+} 
+
+#vertical{
+    display: none;
+}
+
+.font_title{
+    margin: 10px; font-family: arial;
+    font-size: 30px;
+}
+
+.font_cont{
+    margin: 10px;
+    font-family: arial;
+}
+
+.img_alert{
+    margin: 10px; border-radius: 10px;
+}
+
+@media all and (orientation: portrait){
+    
+    #play{
+        display: none;
+    }
+    
+    #vertical{
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: url(recursos/v_telefono.png);
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 800px){
+   #play{
+        width: 94%; height: 90%;
+    }
+    
+    #play img{
+        width: 400px;
+    }
+    
+    .wrapper{
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        top: 10px;
+    }
+    
+    #game{
+        width: 95%;
+        height: 95%;
+        margin: auto;
+    }
+    
+    #datos{
+        bottom: 1%;
+        position: fixed;
+    }
+    
+    #datos p img{
+        width: 30px;
+    }
+    
+    #datos p span{
+        font-size: 15px;
+        bottom: 8px;
+    }
+    
+    #imgHond{
+        position: fixed;
+        transform: rotate(-30deg);
+        top: 150px;
+    } 
+    
+    #imgHond img{
+        width: 80px
+    }
+    
+    #imgCubiertos{
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        transform: rotate(30deg)
+    }
+    
+    #imgCubiertos img{
+        width: 80px;
+    }
+    
+    #MSG{
+        display: none;
+    }
+    
+ 
+    #perder img{
+        width: 60px;
+    }
+    
+    #perder div:nth-child(3), #perder div:nth-child(5){
+        font-size: 16px;
+    }
+    
+    #perder div:nth-child(3):hover, #perder div:nth-child(5):hover{
+        font-size: 17px;
+    }
+    
+    
+}

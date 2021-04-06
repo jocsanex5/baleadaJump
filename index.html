@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Creado por Jocsanex5 -BaleadaPlay 1.0.0-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balea Jump</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" href="recursos/player_a.png" type="image/x-icon" />
+</head>
+<body>
+    <div id="vertical"></div>
+
+    <div id="play">
+        <img src="recursos/logo.png" width="200px">
+            <br>
+        <button id="btnJugar">Jugar</button>
+            <br>
+                <button id="creador" class="creador" title="creador">J_ex5</button> 
+
+            <button class="ayuda" title="Necestas Ayuda?" id="ayuda">Como Jugar?</button> 
+    </div>
+
+     <div id="perder">
+            <div>Upss!!!</div>
+
+            <img src="recursos/reloj.png" width="100px">
+        <div>Tiempo: <span></span></div>
+
+            <img src="recursos/aguacate.png" width="100px">
+        <div>Puntos por agucates: <span id="AR"></span></div>
+
+        <button id="V_a_jugar"><img src="recursos/replay.png" width="70px"></button>
+    </div>
+
+    <div class="wrapper">
+        <div id="imgCubiertos"><img src="recursos/cubiertos.gif" width="200px"></div>
+
+        <div id="imgHond"><img src="recursos/honduras.png" width="200px"></div>
+
+        <div class="area_de_juego">
+            <canvas id="game" width="1000px" height="500px">Ups, no se puede mostrar el contenido del juego!!! :(</canvas>
+        </div>
+
+            <div id="datos">
+                <p><img src="recursos/reloj.png" width="60px"> <span></span></p>
+            </div>
+
+            <div id="MSG"><span>Vamos!!! Logra agarrar todos los agucates</span></div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+</html>
